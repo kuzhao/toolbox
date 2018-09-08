@@ -1,0 +1,9 @@
+yum install -q -y kvm qemu-kvm qemu-img virt-viewer virt-manager libvirt libvirt-python python-virtinst
+
+echo 'auth_unix_ro = "none"' >> /etc/libvirt/libvirtd.conf
+echo 'auth_unix_rw = "none"' >> /etc/libvirt/libvirtd.conf
+
+chkconfig NetworkManager off
+
+echo 'Pre-configuration completes successfully.'
+echo 'Remember to change corresponding network port to hybrid mode and restart the box.'
